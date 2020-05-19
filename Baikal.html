@@ -1,0 +1,215 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<title>Улан-Удэ</title>
+<script type="text/javascript">
+  var conveythis_src = 'ru';
+</script>
+<script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+<script type="text/javascript">
+  VK.init({
+    apiId: ВАШ_API_ID,
+    onlyWidgets: true
+  });
+</script>
+ <script src="live_search.js"></script>
+  <link rel="stylesheet" href="live_search.css">
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+.slideshow {
+width: 200px;
+height: 135px;
+margin: auto;
+}
+#myInput {
+  background-image: url('images/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+p {
+	margin: 15px 0;
+	line-height: 20px;
+}
+
+
+</style>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'ru'
+  }, 'google_translate_element');
+}
+</script>
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+
+
+</script>
+</body>
+<script type="text/javascript">
+var lastResFind=""; // последний удачный результат
+var copy_page=""; // копия страницы в ихсодном виде
+function TrimStr(s) {
+     s = s.replace( /^\s+/g, '');
+  return s.replace( /\s+$/g, '');
+}
+function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+  var obj = window.document.getElementById(inputId);
+  var textToFind;
+ 
+  if (obj) {
+    textToFind = TrimStr(obj.value);//обрезаем пробелы
+  } else {
+    alert("Введенная фраза не найдена");
+    return;
+  }
+  if (textToFind == "") {
+    alert("Вы ничего не ввели");
+    return;
+  }
+ 
+  if(document.body.innerHTML.indexOf(textToFind)=="-1")
+  alert("Ничего не найдено, проверьте правильность ввода!");
+ 
+  if(copy_page.length>0)
+        document.body.innerHTML=copy_page;
+  else copy_page=document.body.innerHTML;
+
+ 
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/name="+lastResFind+"/gi")," ");//стираем предыдущие якори для скрола
+  document.body.innerHTML = document.body.innerHTML.replace(eval("/"+textToFind+"/gi"),"<a name="+textToFind+" style='background:red'>"+textToFind+"</a>"); //Заменяем найденный текст ссылками с якорем;
+  lastResFind=textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+  window.location = '#'+textToFind;//перемещаем скрол к последнему найденному совпадению
+ }
+</script>
+<body>
+
+
+
+<body>
+<div id="top-line"></div>
+
+</div>
+
+</head>
+<body>
+<div id="logo"><img width="2150" height="249" src='images/logo21.png'>
+</div>
+ 
+    
+
+
+<header>
+    <div class="dws-menu">
+       <ul class="dws-ul">
+<div id="google_translate_element"></div>
+            <li class="dws-li"><a href="index.htm"></i>Главная</a></li>
+            <li class="dws-li"><a href="History.html"></i>История</a></li>
+            <li class="dws-li"><a href="population.html"></i>Население</a></li>
+            <li class="dws-li"><a href="Dostop.html"></i>Достопримечательности</a></li>
+            <li class="dws-li"><a href="Klimat.html"></i>Байкал</a></li>
+   <input type="text" id="text-to-find" value=""  onkeyup="myFunction()" placeholder="Поиск">
+   <input type="button" onclick="javascript: FindOnPage('text-to-find'); return false;" value="Искать"/>
+</body>
+   <a href="en/Dostop.html"><input onclick="this.form.langpair.value=this.value" title="English" value="ru|en" type="image" height="25" src="flags/English_thumb.png" width="25" name="langpair" /></a>
+</form>
+
+ <a href="Dostop.html"><input onclick="this.form.langpair.value=this.value" title="Russian"  value=""  type="image" height="25" src="flags/Russian_thumb.png" width="25" name="langpair" /></a>
+        </ul>
+    </div>
+</header>
+                 
+                       
+<centr>
+<div id="content" input type="text" id="elastic">
+<div id="leftblock">
+    
+        <div class="cat-title">Байкал</div>
+        <div class="brands">
+            <b><a href="priboy.htm"> Байкальский прибой</a></b>
+            <a href="buxta1.html"> Бухта Змеевая</a>
+            <a href="buxta2.html"> Бухта Крохалиная </a>
+            <a href="Cherepaha.html"> Валун Черепаха </a>
+            <a href="Gorachinsk.html"> Горячинск</a>
+               <a href="Gremyachinsk.html"> Гремячинск </a>
+        </div>
+      
+        
+      
+        
+    </div>
+<div id="rightblock">
+        <div class="product">
+             <a href="priboy.html" class="product-title">Байкальский прибой</a>
+            <img width="1920" height="300" src='images/logo134.png' alt="" />
+            <div class="price"></div>
+            <a href="priboy.html" class="to-cart">Подробнее</a>
+        </div>
+        <div class="product">
+            <a href="buxta1.html" class="product-title">Бухта Змеевая</a>
+            <img width="600" height="300" src='images/logo135.png' alt="" />
+            <div class="price"></div>
+            <a href="buxta1.html" class="to-cart">Подробнее</a>
+        </div>
+        
+        <div class="product">
+            <a href="buxta2.html" class="product-title"> Бухта Крохалиная</a>
+            <img width="600" height="300" src='images/logo136.png' alt="" />
+            <div class="price"></div>
+            <a href="buxta2.html" class="to-cart">Подробнее</a>
+        </div>
+  <div class="product">
+            <a href="Cherepaha.html" class="product-title"> Валун Черепаха</a>
+            <img width="600" height="300" src='images/logo139.png' alt="" />
+            <div class="price"></div>
+            <a href="Cherepaha.html" class="to-cart">Подробнее</a>
+        </div>
+  <div class="product">
+            <a href="Gorachinsk.html" class="product-title">Горячинск</a>
+            <img width="600" height="300" src='images/logo137.png' alt="" />
+            <div class="price"></div>
+            <a href="Gorachinsk.html" class="to-cart">Подробнее</a>
+        </div>
+<div class="product">
+            <a href="Gremyachinsk.html" class="product-title">Гремячинск</a>
+            <img width="600" height="300" src='images/logo138.png' alt="" />
+            <div class="price"></div>
+            <a href="Gremyachinsk.html" class="to-cart">Подробнее</a>
+        </div>
+</div>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+
+<!-- VK Widget -->
+<div id="vk_community_messages"></div>
+<script type="text/javascript">
+VK.Widgets.CommunityMessages("vk_community_messages", 127607773, {expanded: "1",tooltipButtonText: "Есть вопрос?"});
+</script>
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
+<div id="vk_comments"></div>
+<script type="text/javascript">
+ VK.Widgets.Comments('vk_comments');
+</script>
+</body>
+</html>
